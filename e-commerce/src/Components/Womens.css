@@ -1,0 +1,24 @@
+.wholewomens{
+    display: flex;
+}
+
+.sort-part-womens {
+    width: 25%;
+    margin-top: 2rem;
+}
+
+.womens-data{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 870px) {
+    .womens-data{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

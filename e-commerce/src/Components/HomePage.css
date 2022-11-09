@@ -1,0 +1,138 @@
+.slide1{
+    width: 100%;
+    height: 60%;
+}
+
+.product-types{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-types img{
+    width: 60%;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.bigdeal{
+    border: 1px solid #111;
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.bigdeal-offers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.bigdeal-offers img{
+    border-radius: 15px;
+    margin: auto;
+}
+
+.adv{
+    width:90%;
+    /* border: 1px solid #333; */
+    margin: auto;
+    margin-top: 50px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.adv-first{
+    /* width: 21%; */
+    margin: auto;
+    padding: 2px;
+    /* border-right: 1px solid #555; */
+}
+
+.adv-first img{
+    width: 100%;
+    margin: auto;
+}
+
+.adv-second{
+    /* width: 21%; */
+    margin: auto;
+    padding: 2px;
+    /* border-right: 1px solid #555; */
+}
+
+.adv-second img{
+    width: 100%;
+    margin: auto;
+}
+
+.adv-third{
+    /* width: 21%; */
+    margin: auto;
+    padding: 2px;
+    /* border-right: 1px solid #555; */
+}
+
+.adv-third img{
+    width: 100%;
+    margin: auto;
+}
+
+.adv-fourth{
+    /* width: 21%; */
+    margin: auto;
+    
+}
+
+.adv-fourth img{
+    width: 100%;
+    margin: auto;
+}
+
+.footer{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.footer-mark{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.mark{
+    width: 20%;
+    margin: auto;
+}
+
+.footer img{
+    width: 80px;
+    height: 80px;
+}
+
+@media screen and (max-width: 870px) {
+    .product-types{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bigdeal-offers{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .adv{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .adv-second{
+        border-right: none;
+    }
+}
