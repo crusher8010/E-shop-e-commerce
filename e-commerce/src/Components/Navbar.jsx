@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import { FaStore, FaShoppingCart } from "react-icons/fa";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import {Link} from "react-router-dom";
 
 function Navbar() {
   const [mob, setMob] = useState(false);
@@ -40,7 +41,7 @@ function Navbar() {
       <div className="req1">
         <div className="r1">
           <h1>Login | SignUp</h1>
-          <FaShoppingCart fontSize="25px" />
+          <Link to="/cart"><FaShoppingCart fontSize="25px" /></Link>
         </div>
         {mob ? (
           <div className="r2">

@@ -8,6 +8,8 @@ import MensShirts from "../Pages/Mens/MensShirts";
 import MensPants from "../Pages/Mens/MensPants";
 import PrivateRoute from "./PrivateRoute";
 import Login from "./Login";
+import SignUp from "./SignUp";
+import Cart from "./Cart";
 
 function AllRoutes(){
     return (
@@ -20,6 +22,8 @@ function AllRoutes(){
             <Route path="/menshirts" element={<MensShirts />}></Route>
             <Route path="/menpants" element={<MensPants />}></Route>
             <Route path="/login" element={<Login />}></Route>
+            <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
         </Routes>
     )
 }

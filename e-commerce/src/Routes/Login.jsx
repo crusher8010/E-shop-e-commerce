@@ -2,7 +2,7 @@ import React from "react";
 import { loginFailureAction, loginSuccessAction, loginLoadingAction } from "../Context/Auth/action";
 import { AuthContext } from "../Context/Auth/AuthContext";
 import {useContext, useState} from "react";
-import {Button, Flex, Input, Text, Container, AlertIcon, Alert, AlertDescription, FormControl, FormLabel, FormHelperText, Radio, Heading} from "@chakra-ui/react";
+import {Button, Flex, Input, Text, Container, AlertIcon, Alert, AlertDescription, FormControl, FormLabel, FormHelperText, Radio, Heading, useToast} from "@chakra-ui/react";
 import { FaStore } from "react-icons/fa";
 import axios from "axios";
 import {Navigate, Link} from "react-router-dom";
@@ -10,6 +10,7 @@ import {Navigate, Link} from "react-router-dom";
 const Login = () => {
   const {state, dispatch} = useContext(AuthContext);
   const [logindetails, setLoginDetails] = useState({email:"", password:""})
+  const toast = useToast()
   
   const handlechange = (e) => {
     const {name, value} = e.target;
@@ -28,6 +29,15 @@ const Login = () => {
     .catch(() => {
         dispatch(loginFailureAction());
     });
+
+    toast({
+      position: 'top',
+      title: 'Login Successful.',
+      description: "You Have Successfully Logged in.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
   }
 
   if(state.isAuth){
@@ -64,7 +74,7 @@ const Login = () => {
             <FormLabel mt={8}>Password</FormLabel>
             <Input type="password" name="password" value={logindetails.password} onChange={handlechange}/>
             <FormHelperText>We'll never share your Details</FormHelperText>
-            <Radio colorScheme='blue' value='1' mt={8}>By Clicking on this you are agreeing to our terms and conditions</Radio>
+            
             <div style={{display:"flex", justifyContent:"center"}}>
                 <Button mt={8} onClick={handlelogin} isLoading={state.isLoading}>Submit</Button>
             </div>
