@@ -51,7 +51,7 @@ function Mens(){
                 <div className="mens-data">
                     {data.map((item) => {
                         return (
-                            <div>
+                            <div key={item.id}>
                                 <img style={{width:"250px", height:"250px", margin:"auto"}} src={item.image} alt="" />
                                 <h1>{item.title}</h1>
                                 <p>₹  {item.offer_price}</p>
