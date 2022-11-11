@@ -3,12 +3,14 @@
 }
 
 .sort-part-child {
-    width: 25%;
-    margin-top: 2rem;
+    width: 20%;
+    background-color: black;
+    color: #fff;
+    height: 116vh;
 }
 
 .child-data{
-    width: 70%;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

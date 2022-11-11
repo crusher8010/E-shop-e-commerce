@@ -8,6 +8,7 @@ const initstate = {
   isAuth: false,
   token: "",
   isError: false,
+  isAdmin: false,
 }
 
 const AuthContextProvider = ({children}) => {

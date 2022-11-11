@@ -3,12 +3,14 @@
 }
 
 .sort-part-womens {
-    width: 25%;
-    margin-top: 2rem;
+    width: 23%;
+    background-color: black;
+    color: #fff;
+    height: 115vh;
 }
 
 .womens-data{
-    width: 70%;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

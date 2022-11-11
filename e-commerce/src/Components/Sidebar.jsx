@@ -71,9 +71,9 @@ function Sidebar() {
                         </div>
                         <Box style={{display:wd ? "block" : "none"}}   ml={4} mt={6}>
                             <Link to="/womens">All</Link>
-                            <Text>Sharee</Text>
-                            <Text>Kurtas</Text>
-                            <Text>Tops</Text>
+                            <Link to="/saree"><Text>Sharee</Text></Link>
+                            <Link to="/kurta"><Text>Kurtas</Text></Link>
+                            <Link to="/top"><Text>Tops</Text></Link>
                             <Text>Jeans</Text>
                             <Text>Footwear</Text>
                             <Text>Pants</Text>
@@ -86,11 +86,11 @@ function Sidebar() {
                         </Box>
                         <Box style={{display:cd ? "block" : "none"}} ml={4} mt={6}>
                             <Link to="/childrens">All</Link>
-                            <Text>Shirts</Text>
-                            <Text>Pants</Text>
-                            <Text>Jeans</Text>
+                            <Text>T-Shirts</Text>
                             <Text>Festival Specials</Text>
                             <Text>Footwears</Text>
+                            <Text>Pants</Text>
+                            <Text>Jeans</Text>
                             <Text>Toys</Text>
                         </Box>
                     </Box>

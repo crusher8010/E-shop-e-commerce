@@ -1,5 +1,5 @@
 import React from "react";
-import { loginFailureAction, loginSuccessAction, loginLoadingAction } from "../Context/Auth/action";
+import { loginFailureAction, loginSuccessAction, loginLoadingAction, adminLogin } from "../Context/Auth/action";
 import { AuthContext } from "../Context/Auth/AuthContext";
 import {useContext, useState} from "react";
 import {Button, Flex, Input, Text, Container, AlertIcon, Alert, AlertDescription, FormControl, FormLabel, FormHelperText, Radio, Heading, useToast} from "@chakra-ui/react";
@@ -18,17 +18,23 @@ const Login = () => {
   }
 
   const handlelogin = () => {
+    let mail = "anirudhamandal8010@gmail.com"
+    let code = "12345678";
     dispatch(loginLoadingAction())
-    axios.post('https://reqres.in/api/login',{
+    if(logindetails.email === mail && logindetails.password === code){
+      dispatch(adminLogin());
+    }else {
+      axios.post('https://reqres.in/api/login',{
         email: logindetails.email,
         password: logindetails.password,
-    })
-    .then((res) => {
+      })
+      .then((res) => {
         dispatch(loginSuccessAction(res.data.token));
-    })
-    .catch(() => {
+      })
+      .catch(() => {
         dispatch(loginFailureAction());
-    });
+      });
+    }
 
     toast({
       position: 'top',
@@ -42,6 +48,10 @@ const Login = () => {
 
   if(state.isAuth){
     return <Navigate to="/" />
+  }
+
+  if(state.isAdmin){
+    return <Navigate to="/adminpage" />
   }
 
   if(state.isError){

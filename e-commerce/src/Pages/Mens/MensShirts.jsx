@@ -93,7 +93,9 @@ const shirts = [
 function MensShirts(){
     return (
         <div>
-            <Navbar />
+            <div style={{backgroundColor:"black", color:"#fff"}}>
+                <Navbar />
+            </div>
             <div className="mensShirts">
                 {shirts.map((item) => {
                     return (

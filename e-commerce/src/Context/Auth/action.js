@@ -12,7 +12,13 @@ export const loginSuccessAction = (token) => {
 }
 
 export const loginFailureAction = () => {
-    return {
+   return {
         type: "Login_Failure"
+    }
+} 
+
+export const adminLogin = () => {
+    return {
+        type: "Admin_Success"
     }
 }

@@ -6,12 +6,14 @@ const cartreducer = (state, action) => {
 
         case "Remove_From_Cart":{
             const cartafterremoval = state.filter((item) => 
-                item.id != action.payload
+                item.id !== action.payload
             );
             return cartafterremoval;
         }
 
-        
+        case "Checkout":{
+            return [];
+        }
 
         default : {
             return state

@@ -4,10 +4,24 @@ import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({children}) => {
   let {state} = useContext(AuthContext);
-  
-  if(!state.isAuth){
-    return <Navigate to="/login" />
+  let flag = 0;
+
+  if(state.isAuth === false && state.isAdmin === true){
+    flag = 1;
+  }else{
+    flag = 0;
   }
+  
+  if(flag == 0){
+    if(!state.isAuth){
+      return <Navigate to="/login" />
+    }
+  }else{
+    if(!state.isAdmin){
+      return <Navigate to="/login" />
+    }
+  }
+  
 
   return children;
 };

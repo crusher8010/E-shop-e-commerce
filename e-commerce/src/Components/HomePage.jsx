@@ -80,8 +80,9 @@ function HomePage() {
 
   return (
     <div>
-      {/* Navbar Completed */}
-      <Navbar />
+      <div style={{backgroundColor:"black", color:"#fff"}}>
+        <Navbar />
+      </div>
 
       {/* First Part */}
       <div className="product-types">

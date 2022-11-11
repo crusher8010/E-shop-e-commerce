@@ -12,3 +12,8 @@ export const removeFromCart = (id) => {
     }
 }
 
+export const checkout = () => {
+    return {
+        type: "Checkout",
+    }
+}

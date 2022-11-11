@@ -6,6 +6,7 @@ const reducer = (state, action) => {
                 isAuth: false,
                 token: "",
                 isError: false,
+                isAdmin: false,
             }
         }
 
@@ -15,6 +16,7 @@ const reducer = (state, action) => {
                 isAuth: true,
                 token: action.payload,
                 isError: false,
+                isAdmin: false,
             }
         }
 
@@ -24,6 +26,17 @@ const reducer = (state, action) => {
                 isAuth: false,
                 token: "",
                 isError: true,
+                isAdmin: false,
+            }
+        }
+
+        case "Admin_Success": {
+            return {
+                isLoading: false,
+                isAuth: false,
+                token: "",
+                isError: false,
+                isAdmin: true,
             }
         }
 

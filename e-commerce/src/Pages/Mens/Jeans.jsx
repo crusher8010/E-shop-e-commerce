@@ -78,7 +78,9 @@ const jeans = [
 function Jeans() {
   return (
     <div>
-        <Navbar />
+        <div style={{backgroundColor:"black", color:"#fff"}}>
+          <Navbar />
+        </div>
       <div className="jeans">
         {jeans.map((item) => {
           return (

@@ -1,8 +1,8 @@
 import { CartContext } from "../Context/CartContext/CartContext";
-import { removeFromCart } from "../Context/CartContext/action";
-import { useContext, useState } from "react";
+import { removeFromCart, checkout } from "../Context/CartContext/action";
+import { useContext, useState, useRef } from "react";
 import {
-  TableContainer,
+  TableContainer, Drawer, DrawerBody, Stack, DrawerOverlay, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerFooter, Box,
   Table,
   Thead,
   Tr,
@@ -17,6 +17,7 @@ import {
   Container,
   Heading,
   useToast,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Navbar from "../Components/Navbar";
 import axios from "axios";
@@ -29,6 +30,8 @@ function Cart() {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   let total = 0;
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const firstField = useRef();
 
   const handleQty = (val, id) => {
     setTemp(
@@ -47,15 +50,17 @@ function Cart() {
       total: total,
     });
     setTemp([]);
+    dispatch(checkout());
     setLen(0);
     toast({
       position: "top",
-      title: "Checking Done Successful.",
+      title: "Checkout Successful.",
       description: "Thank You for your Purchase.",
       status: "success",
-      duration: 9000,
+      duration: 3000,
       isClosable: true,
     });
+    onClose();
   };
 
   return (
@@ -128,35 +133,61 @@ function Cart() {
             </Table>
           </TableContainer>
 
-          <Container
-            border="1px"
-            borderColor="gray.300"
-            borderRadius={"2xl"}
-            p={4}
-            mt={20}
-          >
-            <Heading textAlign={"center"}>Checkout Address</Heading>
-            <FormControl>
-              <FormLabel mt={4}>Name</FormLabel>
-              <Input type="text" value={name} onClick={(e) => setName(e.target.value)}/>
-              <FormLabel mt={4}>Address</FormLabel>
-              <Input type="text" value={address} onClick={(e) => setAddress(e.target.value)} />
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <Button
-                  mt={8}
-                  onClick={handlecheckout}
-                  isLoading={state.isLoading}
-                >
-                  Submit
-                </Button>
-              </div>
-            </FormControl>
-          </Container>
+          <div>
+            <div style={{display:"flex", justifyContent:"center", marginTop: "30px"}}>
+              <Button colorScheme="teal" onClick={onOpen}>Proceed to Checkout</Button>
+            </div>
+            <Drawer
+              isOpen={isOpen}
+              placement="right"
+              initialFocusRef={firstField}
+              onClose={onClose}
+            >
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerCloseButton />
+                <DrawerHeader borderBottomWidth="1px">
+                  Checkout
+                </DrawerHeader>
+
+                <DrawerBody>
+                  <Stack spacing="24px">
+                    <Box>
+                      <FormLabel htmlFor="username">Name</FormLabel>
+                      <Input
+                        ref={firstField}
+                        id="username"
+                        placeholder="Please enter user name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </Box>
+
+                    <Box>
+                      <FormLabel >Address</FormLabel>
+                      <Input type="text" placeholder="Please enter your address" value={address} onChange={(e) => setAddress(e.target.value)}/>
+                    </Box>
+                  </Stack>
+                </DrawerBody>
+
+                <DrawerFooter borderTopWidth="1px">
+                  <Button variant="outline" mr={3} onClick={onClose}>
+                    Cancel
+                  </Button>
+                  <Button onClick={handlecheckout} colorScheme="blue">Submit</Button>
+                </DrawerFooter>
+              </DrawerContent>
+            </Drawer>
+          </div>
         </div>
       ) : (
-        <div style={{marginTop:"16px"}}>
-          <div style={{width:"40%", margin:"auto"}}>
-            <img style={{width:"100%", margin:"auto"}} src="https://mir-s3-cdn-cf.behance.net/projects/404/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" alt="" />
+        <div style={{ marginTop: "16px" }}>
+          <div style={{ width: "40%", margin: "auto" }}>
+            <img
+              style={{ width: "100%", margin: "auto" }}
+              src="https://mir-s3-cdn-cf.behance.net/projects/404/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png"
+              alt=""
+            />
           </div>
         </div>
       )}

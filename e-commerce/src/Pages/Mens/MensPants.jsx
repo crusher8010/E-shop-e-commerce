@@ -99,7 +99,9 @@ function MensPants(){
 
     return (
         <div>
-            <Navbar />
+            <div style={{backgroundColor:"black", color:"#fff"}}>
+                <Navbar />
+            </div>
             <div className="menspants">
                 {pants.map((item) => {
                     return (
