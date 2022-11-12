@@ -24,7 +24,7 @@ const fetchdata = (order, val, page) => {
     );
   } else {
     return axios.get(
-      `http://localhost:5000/Mens?_sort=offer_price&_order=${order}&_page=${page}&_limit=12`
+      `http://localhost:5000/Mens?_sort=offer_price&_order=${order}&_page=${page}&_limit=6`
     );
   }
 };

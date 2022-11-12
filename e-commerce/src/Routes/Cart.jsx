@@ -33,14 +33,31 @@ function Cart() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = useRef();
 
+  // console.log(state);
+
+  const handledelete = (id) => {
+    dispatch(removeFromCart(id));
+    const dim = temp.filter((item) => {
+      return item.id !== id;
+    });
+    setTemp(dim)
+    const te = dim.reduce((a, c) => a + c.qty, 0);
+    setLen(te);
+    console.log(len);
+  }
+  
+
   const handleQty = (val, id) => {
     setTemp(
       temp.map((item) =>
         item.id === id ? { ...item, qty: item.qty + val } : item
       )
     );
-    setLen(len + val);
+    setLen(len+val)
+    
   };
+
+  
 
   const handlecheckout = () => {
     axios.post("http://localhost:5000/AdminData", {
@@ -112,7 +129,7 @@ function Cart() {
                       <Td>{Number(item.qty) * Number(item.offer_price)}</Td>
                       <Td>
                         <Button
-                          onClick={() => dispatch(removeFromCart(item.id))}
+                          onClick={() => handledelete(item.id)}
                         >
                           Remove From Cart
                         </Button>
