@@ -7,14 +7,14 @@ import { CartContext } from "../Context/CartContext/CartContext";
 import { addToCart } from "../Context/CartContext/action";
 import Pagination from "../Routes/Pagination";
 
-const fetchdata = (order, val, page) => {
+const fetchdata = (order, val, page = 1) => {
     if (val != "") {
         return axios.get(
           `http://localhost:5000/Womens?_sort=offer_price&_order=${order}&type=${val}&_page=${page}&_limit=6`
         );
       } else {
         return axios.get(
-          `http://localhost:5000/Womens?_sort=offer_price&_order=${order}&_page=${page}&_limit=12`
+          `http://localhost:5000/Womens?_sort=offer_price&_order=${order}&_page=${page}&_limit=6`
         );
     }
 }

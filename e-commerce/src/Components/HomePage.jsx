@@ -169,7 +169,7 @@ function HomePage() {
         </Slider>
       </div>
 
-      <div style={{ marginTop: "60px",border:"1px solid #333" }}>
+      <div style={{ marginTop: "60px" }}>
         <img
           style={{ width: "100%" }}
           src="https://images-static.nykaa.com/uploads/70eac683-7676-4d16-b305-625b4d9c4f20.gif?tr=w-1200,cm-pad_resize"
@@ -265,35 +265,35 @@ function HomePage() {
         <Heading textAlign={"center"}>Join Our Newsletter</Heading>
         <div className="footer-mark">
           <div className="mark">
-            <img
+            <img style={{width:"80px", margin:"auto"}}
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png"
               alt=""
             />
             <p>Instagram</p>
           </div>
           <div className="mark">
-            <img
+            <img style={{width:"80px", margin:"auto"}}
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png"
               alt=""
             />
             <p>Facebook</p>
           </div>
           <div className="mark">
-            <img
+            <img style={{width:"80px", margin:"auto"}}
               src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png"
               alt=""
             />
             <p>Twitter</p>
           </div>
           <div className="mark">
-            <img
+            <img style={{width:"80px", margin:"auto"}}
               src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/pinterest-512.png"
               alt=""
             />
             <p>Pininterest</p>
           </div>
           <div className="mark">
-            <img
+            <img style={{width:"80px", margin:"auto"}}
               src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
               alt=""
             />

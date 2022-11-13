@@ -16,7 +16,7 @@
 }
 
 .bigdeal{
-    border: 1px solid #111;
+    /* border: 1px solid #111; */
     width: 90%;
     margin: auto;
     margin-top: 60px;
@@ -110,6 +110,7 @@
 .mark{
     width: 20%;
     margin: auto;
+    text-align: center;
 }
 
 .footer img{
