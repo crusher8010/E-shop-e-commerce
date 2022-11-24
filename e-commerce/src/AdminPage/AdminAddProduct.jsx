@@ -21,7 +21,7 @@ function AdminAddProduct(){
         let res = Number(offerprice)
 
         if(gender === "Mens"){
-            axios.post('http://localhost:5000/Mens',{
+            axios.post('https://ani-mock-server-app.onrender.com/Mens',{
                 qty: 1,
                 price: null,
                 brand: brand,
@@ -33,7 +33,7 @@ function AdminAddProduct(){
                 image: url,
             })
         }else if(gender === "Womens"){
-            axios.post('http://localhost:5000/Womens',{
+            axios.post('https://ani-mock-server-app.onrender.com/Womens',{
                 qty: 1,
                 price: null,
                 brand: brand,
@@ -45,7 +45,7 @@ function AdminAddProduct(){
                 image: url,
             })
         }else{
-            axios.post('http://localhost:5000/Childrens',{
+            axios.post('https://ani-mock-server-app.onrender.com/Childrens',{
                 qty: 1,
                 price: null,
                 brand: brand,

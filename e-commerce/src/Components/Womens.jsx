@@ -10,11 +10,11 @@ import Pagination from "../Routes/Pagination";
 const fetchdata = (order, val, page = 1) => {
     if (val != "") {
         return axios.get(
-          `http://localhost:5000/Womens?_sort=offer_price&_order=${order}&type=${val}&_page=${page}&_limit=6`
+          `https://ani-mock-server-app.onrender.com/Womens?_sort=offer_price&_order=${order}&type=${val}&_page=${page}&_limit=6`
         );
       } else {
         return axios.get(
-          `http://localhost:5000/Womens?_sort=offer_price&_order=${order}&_page=${page}&_limit=6`
+          `https://ani-mock-server-app.onrender.com/Womens?_sort=offer_price&_order=${order}&_page=${page}&_limit=6`
         );
     }
 }

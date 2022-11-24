@@ -10,7 +10,7 @@ function AdminPurchase(){
     const [purchase, setPurchase] = useState([]);
 
     const fetchdata = () => {
-        axios.get('http://localhost:5000/AdminData')
+        axios.get('https://ani-mock-server-app.onrender.com/AdminData')
         .then((res) => setPurchase(res.data));
     }
 
