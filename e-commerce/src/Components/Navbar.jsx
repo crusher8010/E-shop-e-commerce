@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Navbar.css";
 import { FaStore, FaShoppingCart } from "react-icons/fa";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
