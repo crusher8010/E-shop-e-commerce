@@ -30,6 +30,16 @@ const reducer = (state, action) => {
             }
         }
 
+        case "LogOut":{
+            return {
+                isLoading: false,
+                isAuth: false,
+                token: "",
+                isError: false,
+                isAdmin: false,
+            }
+        }
+
         case "Admin_Success": {
             return {
                 isLoading: false,

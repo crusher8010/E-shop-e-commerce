@@ -17,6 +17,12 @@ export const loginFailureAction = () => {
     }
 } 
 
+export const logoutAction = () => {
+    return {
+        type: "LogOut"
+    }
+}
+
 export const adminLogin = () => {
     return {
         type: "Admin_Success"

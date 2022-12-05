@@ -1,12 +1,24 @@
 import Sidebar from "./Sidebar";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Navbar.css";
 import { FaStore, FaShoppingCart } from "react-icons/fa";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import {Link} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
+import {AuthContext} from "../Context/Auth/AuthContext";
+import { logoutAction } from "../Context/Auth/action";
 
 function Navbar() {
   const [mob, setMob] = useState(false);
+  let {state, dispatch} = useContext(AuthContext);
+  
+  const logoutHandler = () => {
+    dispatch(logoutAction())
+  }
+  
+
+  if(!state.isAuth){
+    return <Navigate to="/login" />
+  }
 
   return (
     <nav className="navbar">
@@ -42,6 +54,7 @@ function Navbar() {
         <div className="r1">
           <h1>Login | SignUp</h1>
           <Link to="/cart"><FaShoppingCart fontSize="25px" /></Link>
+          <Link className="logout" onClick={logoutHandler}><b>Log Out</b></Link>
         </div>
         {mob ? (
           <div className="r2">
