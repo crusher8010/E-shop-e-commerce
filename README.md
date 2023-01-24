@@ -5,19 +5,19 @@ Simple tried to make a e-commerce website. The website data I have taken is mock
 ## Screenshots
 
 ## Home Page
-![Screenshot (121)](https://user-images.githubusercontent.com/107460084/214225231-341ddb93-81df-4038-95ea-1189f9f7e2c7.png)
+![Screenshot (132)](https://user-images.githubusercontent.com/107460084/214226823-0d6a348b-a907-4b4f-be57-eb9f907adddb.png)
 
-## Pricing Page
-![Screenshot (122)](https://user-images.githubusercontent.com/107460084/214225285-16772126-8991-46f3-956c-3958e2806112.png)
+## Product Page
+![Screenshot (133)](https://user-images.githubusercontent.com/107460084/214226983-c25e683d-cb56-4f87-b907-6423fac35fd8.png)
 
-## Customer Page
-![Screenshot (123)](https://user-images.githubusercontent.com/107460084/214225374-7710c546-db15-403b-9932-f1d46b8eb766.png)
+## Cart Page
+![Screenshot (134)](https://user-images.githubusercontent.com/107460084/214227090-96ccd044-92fd-445c-a2f2-9032731658bd.png)
 
 ## Login Page
-![Screenshot (124)](https://user-images.githubusercontent.com/107460084/214225418-8d2bc681-e074-454a-a30b-961ef23a94d7.png)
+![Screenshot (131)](https://user-images.githubusercontent.com/107460084/214226886-f15fb9ee-81a2-4d65-a771-5519ff740ef5.png)
 
-## Demo Page
-![Screenshot (125)](https://user-images.githubusercontent.com/107460084/214225480-29c837fe-7475-44d9-af8c-4fcc847816d3.png)
+## Admin Page
+![Screenshot (135)](https://user-images.githubusercontent.com/107460084/214227243-3a0c5012-0345-41ed-b5f6-3b4d5fd72bf3.png)
 
 
 ## Deployment
@@ -28,25 +28,22 @@ To deploy this project run
   npm run deploy
 ```
 Deployed link:
-https://resonant-licorice-2615de.netlify.app/
-
+https://wondrous-kashata-803fb3.netlify.app/
 
 ## Tech Stack
 
-**Client:** HTML, CSS, Javascript, Marquee Effect
+**Client:** Javascript, React, Redux, Chakra-UI
 
-**Server:** Local Storage
+**Server:** render.com
 
 
 ## Features
 
 - Full Responsive
 - Authenticate Login and Signup with backend.
+- Cart functionalities
+- Admin Side Page
 
 ## Authors
 
 - Anirudha Mandal (https://github.com/crusher8010)
-- Prateek Bhattacharya (https://github.com/prateekoctane)
-- Bhuvan Jangra (https://github.com/BhuvanJangra)
-- Ashish Bopulkar (https://github.com/AshishBopulkar)
-- Sajan Kumar (https://github.com/sajan1789)
