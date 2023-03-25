@@ -47,3 +47,8 @@ https://wondrous-kashata-803fb3.netlify.app/
 ## Authors
 
 - Anirudha Mandal (https://github.com/crusher8010)
+
+##Login Data
+
+User Email : eve.holt@reqres.in
+Password: cityslicka
