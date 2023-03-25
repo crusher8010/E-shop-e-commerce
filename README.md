@@ -48,7 +48,11 @@ https://wondrous-kashata-803fb3.netlify.app/
 
 - Anirudha Mandal (https://github.com/crusher8010)
 
-## Login Data
+# Login Data
 
+## User Side
 User Email : eve.holt@reqres.in
 Password: cityslicka
+## Admin Side
+Admin Email: anirudhamandal8010@gmail.com
+Password: 12345678
