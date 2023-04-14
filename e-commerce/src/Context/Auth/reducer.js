@@ -50,6 +50,16 @@ const reducer = (state, action) => {
             }
         }
 
+        case "LogOut":{
+            return {
+                isLoading: false,
+                isAuth: false,
+                token: "",
+                isError: false,
+                isAdmin: false,
+            }
+        }
+
         default: {
             return state;
         }

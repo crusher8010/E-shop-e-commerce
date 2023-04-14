@@ -28,3 +28,9 @@ export const adminLogin = () => {
         type: "Admin_Success"
     }
 }
+
+export const logoutAction = () => {
+    return {
+        type: "LogOut"
+    }
+}
