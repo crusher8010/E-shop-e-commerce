@@ -28,7 +28,7 @@ To deploy this project run
   npm run deploy
 ```
 Deployed link:
-https://wondrous-kashata-803fb3.netlify.app/
+https://e-commerce-liart-chi.vercel.app/
 
 ## Tech Stack
 
