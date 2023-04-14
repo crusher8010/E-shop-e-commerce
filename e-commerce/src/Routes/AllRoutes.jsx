@@ -17,14 +17,14 @@ import Sharee from "../Pages/Womens/Sharee";
 import Kurta from "../Pages/Womens/Kurta";
 import Top from "../Pages/Womens/Top"
 
-function AllRoutes(){
+function AllRoutes() {
     return (
         <Routes>
-            <Route path="/" element={<PrivateRoute><HomePage/></PrivateRoute>}></Route>
-            <Route path="/mens" element={<PrivateRoute><Mens /></PrivateRoute>}></Route>
-            <Route path="/womens" element={<PrivateRoute><Womens /></PrivateRoute>}></Route>
-            <Route path="/childrens" element={<PrivateRoute><Childrens /></PrivateRoute>}></Route>
-            <Route path="/jeans" element={<PrivateRoute><Jeans /></PrivateRoute>}></Route>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/mens" element={<Mens />}></Route>
+            <Route path="/womens" element={<Womens />}></Route>
+            <Route path="/childrens" element={<Childrens />}></Route>
+            <Route path="/jeans" element={<Jeans />}></Route>
             <Route path="/menshirts" element={<MensShirts />}></Route>
             <Route path="/menpants" element={<MensPants />}></Route>
             <Route path="/login" element={<Login />}></Route>
@@ -33,9 +33,9 @@ function AllRoutes(){
             <Route path="/adminpage" element={<PrivateRoute><AdminPage /></PrivateRoute>}></Route>
             <Route path="/adminaddproduct" element={<PrivateRoute><AdminAddProduct /></PrivateRoute>}></Route>
             <Route path="/adminpurchase" element={<PrivateRoute><AdminPurchase /></PrivateRoute>}></Route>
-            <Route path="/saree" element={<PrivateRoute><Sharee /></PrivateRoute>}></Route>
-            <Route path="/kurta" element={<PrivateRoute><Kurta /></PrivateRoute>}></Route>
-            <Route path="/top" element={<PrivateRoute><Top /></PrivateRoute>}></Route>
+            <Route path="/saree" element={<Sharee />}></Route>
+            <Route path="/kurta" element={<Kurta />}></Route>
+            <Route path="/top" element={<Top />}></Route>
             <Route></Route>
             <Route></Route>
         </Routes>
