@@ -12,14 +12,8 @@ export const loginSuccessAction = (token) => {
 }
 
 export const loginFailureAction = () => {
-   return {
-        type: "Login_Failure"
-    }
-} 
-
-export const logoutAction = () => {
     return {
-        type: "LogOut"
+        type: "Login_Failure"
     }
 }
 
